@@ -1,5 +1,6 @@
 .week-view-container{
     display: flex;
     flex-direction: row;
-    gap:5%;
+    gap:1%;
+    min-width: 200px;
 }

@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import { WeekView } from '../WeekView';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+
 import './Calendar.css';
 
 const weekDays = [1, 2, 3, 4, 5, 6, 0];
@@ -7,7 +11,6 @@ const weekDays = [1, 2, 3, 4, 5, 6, 0];
 const Calendar = () => {
     const today = new Date();
     const [weekStartDate, setWeekStartDate] = useState<Date>(today);
-
     useEffect(() => {
         let startDate = new Date();
         startDate.setDate(today.getDate() - (weekDays.indexOf(today.getDay())));
@@ -24,13 +27,27 @@ const Calendar = () => {
     }
     return (
         <div className="calendar-container">
-            <div className="button-section">
-                <button onClick={handlePrevClick}>Prev</button>
-                <button onClick={handleNextClick}>Next</button>
-            </div>
-            <div className="week-view-section">
-                <WeekView weekStartDate={weekStartDate} />
-            </div>
+            <Grid container spacing={2} alignItems="center" justifyContent='center'>
+                <Grid item sm={8}>
+                    <Button variant="contained" onClick={handlePrevClick}>Prev</Button>
+                </Grid>
+                <Grid item sm={1}>
+                    <Button variant="contained" onClick={handleNextClick}>Next</Button>
+                </Grid>
+                <Grid item lg={12}>
+                    <Divider variant="middle" style={{
+                        width: '100%',
+                        margin: '20px'
+                    }} />
+                </Grid>
+            </Grid>
+
+
+            <Grid container spacing={2} alignItems="center" justifyContent='center'>
+                <Grid item>
+                    <WeekView weekStartDate={weekStartDate} />
+                </Grid>
+            </Grid>
         </div>
     );
 };

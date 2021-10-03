@@ -1,0 +1,30 @@
+{
+    "calendarEvents": [
+        {
+            "date": "2021-10-05T06:08:29.726Z",
+            "events": [
+                "party"
+            ]
+        },
+        {
+            "date": "2021-10-03T06:08:29.726Z",
+            "events": [
+                "party"
+            ]
+        },
+        {
+            "date": "2021-10-02T06:08:29.726Z",
+            "events": [
+                "party",
+                "birthday"
+            ]
+        },
+        {
+            "date": "2021-10-01T06:08:29.726Z",
+            "events": [
+                "party",
+                "birthday"
+            ]
+        }
+    ]
+}
