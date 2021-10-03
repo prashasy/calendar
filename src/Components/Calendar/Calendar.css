@@ -1,0 +1,21 @@
+.calendar-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:40vh;
+}
+
+.button-section{
+    display:flex;
+flex-direction: row;
+justify-content: center;
+margin:10px;
+width:20%;
+}
+
+.week-view-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
